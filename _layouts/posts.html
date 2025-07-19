@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{% capture image %}
+    {{ image | default: 'page image default alt' }}
+{% endcapture %}
+
+<h1>Story: {{ site.title }}</h1>
+
+<img src="{% image %}" width="300" height="200"/>
+
+{{ content }}
+
+© Layout Created by <a href="https://github.com/viktor-chiarcos">viktor-chiarcos</a>
