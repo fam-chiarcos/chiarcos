@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /menu/
 permalink: /chiarcos/
 ---
 
