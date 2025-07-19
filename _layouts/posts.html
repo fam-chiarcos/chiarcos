@@ -1,9 +1,12 @@
 ---
 layout: page
 ---
-{% capture image %}
-    {{ image | default: 'page image default alt' }}
-{% endcapture %}
+{% if page.image %}
+    {% capture image %}
+        {{ image | default: 'page image default alt' }}
+    {% endcapture %}
+{% endif %}
+
 
 <h1>Story: {{ site.title }}</h1>
 
