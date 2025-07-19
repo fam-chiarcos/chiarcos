@@ -9,6 +9,11 @@ layout: page
 {% endif %} -->
 
 {% if page.image %}
+  {% capture image %}
+    {{ page.image | relative_url | default: '' }}
+  {% endcapture %}
+
+{% if page.image %}
   {% capture page_image %}
     {{ page.image | relative_url | default: '' }}
   {% endcapture %}
@@ -35,7 +40,7 @@ layout: page
       </figure>
       {% endif %}
       
-<img src="{{ page_image }}" width="300" height="200"/>
+<img src="{{ image }}" width="300" height="200"/>
 
 {{ content }}
 
