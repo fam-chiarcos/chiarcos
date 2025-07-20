@@ -23,9 +23,6 @@ layout: page
   {% endcapture %}
 {% endif %}
 
-
-<link rel="icon" href="src/favicon.ico" type="image/x-icon">
-
 <h1><a href="/">Familie Chiarcos</a></h1>
 <h1>Story: {{ page.title }}</h1>
 
@@ -36,7 +33,9 @@ layout: page
           alt="{{ page_image_alt | strip }}">
         <figcaption class="figure-caption text-center">{{ page_image_caption | strip }}</figcaption>
       </figure>
-      <img src="{{ page_image }}" width="300" height="200"/>
+
+<link rel="icon" href="src/favicon.ico" type="image/x-icon">
+<img src="{{ page_image }}" width="300" height="200"/>
 {% endif %}
 {{ content }}
 
