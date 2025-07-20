@@ -13,10 +13,6 @@ layout: page
     {{ page.image | relative_url | default: '' }}
   {% endcapture %}
 
-{% if page.image %}
-  {% capture page_image %}
-    {{ page.image | relative_url | default: '' }}
-  {% endcapture %}
 
   {% capture page_image_alt %}
     {{ page.image_alt | default: 'page image default alt' }}
@@ -27,7 +23,9 @@ layout: page
   {% endcapture %}
 {% endif %}
 
-
+{% if page.show_hero and page_image %}
+    <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+ {% endif %}
 <h1><a href="/">Familie Chiarcos</a></h1>
 <h1>Story: {{ page.title }}</h1>
 
