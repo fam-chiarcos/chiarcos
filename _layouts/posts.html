@@ -2,9 +2,6 @@
 layout: page
 ---
 
-<head><link rel="icon" href="https://fam-chiarcos.github.io/chiarcos/logo.svg" type="image/x-icon"></head>
-
-
 <!-- {% if page.image %}
     {% capture image %}
         {{ image | default: 'page image default alt' }}
@@ -27,7 +24,7 @@ layout: page
 {% endif %}
 
 <h1><a href="/">Familie Chiarcos</a></h1>
-<h1>Story: {{ page.title }}</h1>
+<h1>Post: {{ page.title }}</h1>
 
 {% if page.show_hero %}
   {% if page_image %}
@@ -39,7 +36,7 @@ layout: page
     </figure>
   {% endif %}
 {% endif %}
-<link rel="icon" href="src/favicon.ico" type="image/x-icon">
+<link rel="icon" href={{ image }}" type="image/x-icon">
 <img src="{{ image }}" width="300" height="200"/>
 
 {{ content }}
